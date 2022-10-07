@@ -58,6 +58,24 @@ export default {
       }
     },
 
+    openConfirmationModal() {
+      this.confirmActionModalOpened = true
+    },
+
+    /**
+     * Close the action confirmation modal.
+     */
+    closeConfirmationModal() {
+      this.confirmActionModalOpened = false
+    },
+
+    /**
+     * Close the action response modal.
+     */
+     closeActionResponseModal() {
+      this.showActionResponseModal = false
+    },
+
     /**
      * Handle a click on an action.
      *
@@ -67,6 +85,8 @@ export default {
       return this.determineActionStrategy(action);
     },
   },
+
+ 
 
   computed: {
     /**

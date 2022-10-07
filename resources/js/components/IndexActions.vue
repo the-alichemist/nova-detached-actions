@@ -48,6 +48,13 @@ export default {
   mixins: [DetachedAction],
 
   props: ["resourceName"],
+
+  data() {
+    return {
+      showActionResponseModal: false,
+    }
+  },
+  
   methods: {
     handleResponse(response) {
       this.actionsList = _.filter(
